@@ -1,0 +1,39 @@
+<view class="homepage">
+  	<view class="centertop">
+		<view class="centerphpto">
+			<image src="../../../image/bg.jpg" ></image>
+		</view>
+		<view class="centersearch" bindtap="toast" >
+			<image src="../../../image/centerSearch.png" class="icon-search" ></image>
+				搜索民宿部落
+  		</view>
+	  </view> 
+	  <view class="grap"></view>
+	   <view class=" centertuijian">
+	    	<view class="centerword">热门推荐</view>
+		    <view class="jiantou" bindtap="tiaozhuan" >
+				<image src="../../../image/jiantou.png"></image>
+			</view> 
+	  </view>
+	  <swiper class="first"  style="height:{{imgUrls.bodyHeight}}"  
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" current="{{swiperCurrent}}" bindchange="swiperChange">  
+	     <view class="dots">  
+		    <block wx:for="{{imgUrls.picture}}" wx:key="unique">  
+		      <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>  
+		    </block>  
+ 		</view>     
+	    <block wx:for="{{imgUrls.picture}}" wx:key="index" > 
+	      <swiper-item >
+	      	<navigator url="{{imgUrls.name1[index]}}" class="hide"  >
+	        	<image src="{{item}}" class="slide-image" /> 
+	        </navigator>
+				<view class="kong" >
+					<span>{{imgUrls.name[index]}} </span>
+					<span>{{imgUrls.price[index]}}</span>
+				</view>		
+	      </swiper-item>    
+	    </block> 	
+		
+	</swiper>  
+</view>
+

@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<view class="modal" hidden="{{hidden}}" >
+  <view class="modalTitle">微信授权</view>
+  <view class="modalPic">
+    <view class="modalIcon">
+      <image src="../../../image/common/me.png"></image>
+    </view>
+    <view class="modalword">你的民宿获取以下权限：</view>
+   </view>
+    <view class="message">
+      <view class="messageCircle"></view>
+      <view class="messageCentent">获得你的公开信息（昵称、头像等） </view>
+    </view>
+    <view class="btn">
+      <view bindtap="cancelBtn" class="btn1" >拒绝</view>
+      <view bindtap="comfir" class="btn2" >确定</view>
+    </view>
+</view>
+
+<view class="commodity_screen" hidden="{{hidden1}}"  ></view>
+<view class="container">
+    <view bindtap="bindViewTap" class="userinfo">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+    <view class="usermotto">
+      <text class="user-motto">{{motto}}</text>
+    </view>
+  </view>

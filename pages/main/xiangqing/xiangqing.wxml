@@ -1,0 +1,56 @@
+<view class="zong" >
+  <swiper>  
+    <block wx:for="{{imgUrls.hostelExternalImage}}" wx:key="index">   
+      <swiper-item>  
+        <image src="{{item}}" class="slide-image" />  
+    </swiper-item>    
+    </block> 
+  </swiper>  
+  <view class="name">
+        <span>{{imgUrls.hostelName}}</span>
+    </view> 
+    <view class="home" >
+     	<view class="jieshao" >民宿素描</view>
+       <view class="jieshao1" ><span></span>{{imgUrls.hostelExternalIntroduce}}</view>
+    </view>
+    <view class="grap" ></view>
+    <view class="home" >
+     	<view class="jieshao" >环境靓点</view>
+        <view class="jieshao2" ><span></span>{{imgUrls.hostelInsideIntroduce}}</view>
+       	<block wx:for-items="{{imgUrls.personalityimage1}}" wx:key="index">
+       		<view class="pic">
+       			<image src="{{item}}" ></image>
+       		</view>
+       </block>
+       <view class="word">{{imgUrls.personalityimagetitle}}</view>
+       <block wx:for-items="{{imgUrls.personalityimage2}}" wx:key="index">
+       		<view class="pic">
+       			<image src="{{item}}" ></image>
+       		</view>
+       </block>
+    </view>
+    <view class="grap" ></view>
+    <view class="type" >
+      <view class="price" >价格列表</view>
+      <view class="biao">
+  		<span>房屋类型</span>
+  		<span>价格</span>
+  		  <block wx:for-items="{{imgUrls.hostelType}}" wx:key="index">
+	          <span class="first" >{{item}}</span>
+	          <span class="second" >{{imgUrls.hostelPrice[index]}}</span>
+          </block>
+      </view>
+    </view>
+     <view class="grap1" ></view>
+     <view class="type" >
+         <view class="price" >地址</view>
+        <block wx:for-items="{{imgUrls.hostelAddress}}" wx:key="index">
+         	<view class="dress2" >{{item}}</view>
+         </block>
+     </view>
+      <view class="grap1" ></view>
+      <view class="last" >
+        <button type="default" bindtap="calling">立即咨询</button>
+
+      </view>
+</view>

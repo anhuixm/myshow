@@ -1,0 +1,27 @@
+	<loading hidden="{{hidden}}" bindchange="loadingChange"> 加载中...</loading>
+  <scroll-view scroll-y="true" style="height: 100%;" bindscrolltolower="loadMore" bindscrolltoupper="refesh">
+      <view wx:if="{{hasRefesh}}" style="display: flex;flex-direction: row;align-items: center;align-self: center;justify-content: center;">
+     	 <icon type="waiting" size="45"/><text>刷新中...</text>
+	  </view>
+      <view wx:else  style="display:none" ><text></text></view>
+    <view class="loginwrap">
+		<view class="grap"></view>
+		<view class="loginul">
+			<block wx:for-items="{{list}}" wx:key="index">
+				<view class="loginli">
+					<view class="miaoshu" >
+						<span class="name" >{{item.name}}</span>	
+							<span class="name" >{{item.hostelprice}}起</span>	     
+					</view>
+					<image class="wenan" bindtap="Click" id="{{index}}" src="{{item.address}}"></image>
+					
+				</view>
+			</block>
+		</view>
+	</view>
+	<view class="tips1">
+      <view wx:if="{{hasMore}}" style="display: flex;flex-direction: row;align-items: center;align-self: center;justify-content: center;">
+      <icon type="waiting" size="40"/><text>玩命的加载中...</text></view>
+      <view wx:else><text>没有更多内容了</text></view>
+    </view>
+</scroll-view>

@@ -1,0 +1,39 @@
+{
+  "pages":[
+    "pages/main/mycenter/mycenter",
+    "pages/main/search/search",
+  	"pages/main/table/table",
+  	"pages/main/xiangqing/xiangqing",
+  	"pages/main/index/index",
+    "pages/main/message/message"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarTitleText":"welcome",
+    "navigationBarTextStyle":"#000000"
+  },
+	"tabBar":{
+		"color":"#000000",
+		"background":"#ffffff",
+		"list":[{
+			"pagePath":"pages/main/mycenter/mycenter",
+			"iconPath":"image/common/search.png",
+			"selectedIconPath":"image/common/redsearch.png",
+			"text":"发现"
+		},{
+		"pagePath":"pages/main/search/search",
+		"iconPath":"image/common/heart.png",
+		"selectedIconPath":"image/common/redheart.png",
+		"text":"导游"
+	},{
+		"pagePath":"pages/main/index/index",
+		"iconPath":"image/common/me.png",
+		"selectedIconPath":"image/common/redme.png",
+		"text":"我的"
+	}]
+},
+  "networkTimeout": {
+        "request": 12000
+  }
+
+}

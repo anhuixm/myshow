@@ -1,0 +1,24 @@
+<view class="container1">
+	<view class="grap"></view>
+    <view class="second" > 
+        <view class="sousuo">
+            <view class="search">
+                <view class="icon" ></view>
+                <input  class="inpt" bindinput="userNameInput"  type="text" placeholder="搜索民宿部落" />
+            </view>
+            <view class="sure" bindtap="tijiao" >确定</view>
+        </view>
+     </view>
+     <view class="{{flag===0?'hide':'show'}}">此地暂无民宿资源</view>
+     <view class="grap"></view>
+     <view class="like">
+        <view class="word" >为你推荐</view>
+        <view class="content" >
+            <navigator url="../xiangqing/xiangqing?id=湘桂黔&number=2">湘桂黔</navigator>
+            <navigator url="../xiangqing/xiangqing?id=滇西北&number=2">滇西北</navigator>
+            <navigator url="../xiangqing/xiangqing?id=川藏线&number=2">川藏线</navigator>
+            <navigator url="../xiangqing/xiangqing?id=江浙沪&number=2">江浙沪</navigator>
+            <navigator url="../xiangqing/xiangqing?id=徽文化圈&number=2">徽文化圈</navigator>
+        </view>
+     </view>
+</view>
